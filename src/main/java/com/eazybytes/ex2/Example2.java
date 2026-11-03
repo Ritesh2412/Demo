@@ -17,5 +17,8 @@ public class Example2 {
         var vhcle= context.getBean(Vehicle.class);
         System.out.println("Spring Context: " + vhcle.getName());
 
+        var helloWorld = context.getBean("helloWorld",String.class);
+        System.out.println("String value from Spring Context is: " + helloWorld);
+
     }
 }

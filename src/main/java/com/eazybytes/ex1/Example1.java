@@ -12,6 +12,6 @@ public class Example1 {
         System.out.println("Spring Context: " + veh.getName());
 
         var vehicle = (Vehicle)context.getBean("vehicle2");
-        System.out.println("Spring Context: " + veh.getName());
+        System.out.println("Spring Context: " + vehicle.getName());
     }
 }
