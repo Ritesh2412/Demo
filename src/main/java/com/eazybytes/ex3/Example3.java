@@ -12,6 +12,7 @@ public class Example3 {
         System.out.println("Spring Context: " + veh.getName());
 
         veh.sayHello();
+        context.close();
 
 
     }
