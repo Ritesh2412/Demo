@@ -7,20 +7,24 @@ import org.springframework.stereotype.Component;
 @Component
 public class Car {
 
-    public Car(){
-        System.out.println("Car bean created");
-    }
-
     private String name;
 
-//    @Autowired
+    //    @Autowired  // Field Injection
     private Engine engine;
+
+
+    //Contructor Injection
+    @Autowired  //For Contructor Injection @Autowired is optional.
+    public Car(Engine engine){
+        this.engine=engine;
+        System.out.println("Car bean created");
+    }
 
     public Engine getEngine() {
         return engine;
     }
 
-    @Autowired
+//    @Autowired  // Setter Injection
     public void setEngine(Engine engine) {
         this.engine = engine;
     }
