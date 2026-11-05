@@ -4,10 +4,12 @@ package com.eazybytes.ex4.config;
 import com.eazybytes.ex4.beans.Person;
 import com.eazybytes.ex4.beans.Vehicle;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
+@ComponentScan(basePackages = {"com.eazybytes.ex4.beans"})
 public class ProjectConfig {
 
     @Bean
